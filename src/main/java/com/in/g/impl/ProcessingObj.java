@@ -10,7 +10,7 @@ public abstract class ProcessingObj<T> {
     public T handler(T input) {
         T r = handlerWork(input);
         if (processingObj != null){
-            return processingObj.handler(input);
+            return processingObj.handler(r);
         }
         return r;
     }
