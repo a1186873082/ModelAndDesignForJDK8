@@ -25,18 +25,18 @@ public class TestController {
 //        f.registerObserver(new Guardian());
 //        f.registerObserver(new LeMonde());
 //        f.notifyOfObserver("The queen said her favourite book is Java 8 in Action!");
-//        Feed f = new Feed();
-//        f.registerObserver((String sweet) -> {
-//            if (sweet != null && sweet.contains("queen")) {
-//                System.out.println("Yet another news in London..." + sweet);
-//            }
-//        });
-//        f.registerObserver((String sweet) -> {
-//            if(sweet != null && sweet.contains("wine")){
-//                System.out.println("Today cheese, wine and news! " + sweet);
-//            }
-//        });
-//        f.notifyOfObserver("The queen said her favourite book is Java 8 in Action!");
+        Feed f = new Feed();
+        f.registerObserver((String sweet) -> {
+            if (sweet != null && sweet.contains("queen")) {
+                System.out.println("Yet another news in London..." + sweet);
+            }
+        });
+        f.registerObserver((String sweet) -> {
+            if(sweet != null && sweet.contains("wine")){
+                System.out.println("Today cheese, wine and news! " + sweet);
+            }
+        });
+        f.notifyOfObserver("The queen said her favourite book is Java 8 in Action!");
 //        //責任鏈模式
 //        ProcessingObj<String> p1 = new HeaderTestProssing();
 //        ProcessingObj<String> p2 = new SpellCheckerProcessing();
